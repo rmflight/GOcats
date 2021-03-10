@@ -2,7 +2,6 @@
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
-__pycache__/
 *.py[cod]
 *$py.class
 
@@ -134,6 +133,8 @@ GitHub.sublime-settings
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+runscripts/*
+vignettes/*
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
@@ -177,3 +178,6 @@ fabric.properties
 # modules.xml
 # .idea/misc.xml 
 # *.ipr
+doc/_templates/
+doc/html/
+gocats/__pycache__/

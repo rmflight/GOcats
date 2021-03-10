@@ -14,28 +14,32 @@ Currently, the `GOcats` package can be used to:
 
 Citation
 ~~~~~~~~
-Please cite the GitHub repository until our manuscript is accepted for publication: https://github.com/MoseleyBioinformaticsLab/GOcats.git
+Please cite the following papers when using GOcats:
+
+Hinderer EW, Moseley NHB. GOcats: A tool for categorizing Gene Ontology into subgraphs of user-defined concepts. PLoS One. 2020;15(6):1-29.
+
+Hinderer EW, Flight RM, Dubey R, Macleod JN, Moseley HNB. Advances in Gene Ontology utilization improve statistical power of annotation enrichment. PLoS One. 2019;14(8):1-20.
 
 Installation
 ~~~~~~~~~~~~
 
-`GOcats` runs under Python 3.4+, clone the git repo and install the following dependencies and you are ready to go!
+`GOcats` runs under Python 3.4+ and is available through python3-pip. Install via pip or clone the git repo and install
+the following dependencies and you are ready to go!
 
 Install on Linux
 ----------------
 
-Dependency installation
-.......................
+Pip installation
+................
 
-GOcats requires JSONPickle and docopt:
-
+Dependencies should be automatically installed using this method. It is strongly recommended that you install with this
+method.
 .. code:: bash
 
-   pip3 install docopt
-   pip3 install jsonpickle
+   pip3 install gocats
 
-Package installation
-....................
+GitHub Package installation
+...........................
 
 Make sure you have git_ installed:
 
@@ -44,18 +48,31 @@ Make sure you have git_ installed:
    cd ~/
    git clone https://github.com/MoseleyBioinformaticsLab/GOcats.git
 
+Dependencies
+............
+
+`GOcats` requires the following Python libraries:
+
+   * docopt_ for creating the gocats command-line interface.
+   * JSONPickle_ for saving Python objects in a JSON serializable form and outputting to a file.
+
+To install dependencies manually:
+
+.. code:: bash
+
+   pip3 install docopt
+   pip3 install jsonpickle
+
 Install on Windows
 ------------------
-Windows version not yet available; sorry about that.
+GOcats can also be installed on windows through pip.
 
 Quickstart
 ~~~~~~~~~~
 
-For instructions on how to format your keyword list and advanced argument usage, consult the tutorial, guide, and API
-documentation in GOcats/doc.
+For instructions on how to format your keyword list and advanced argument usage, consult the tutorial, guide, and API documentation at readthedocs_.
 
-Subgraphs can be created from the command line. Either navigate to the GOcats directory or add the directory to your
-PYTHONPATH:
+Subgraphs can be created from the command line.
 
 .. code:: bash
 
@@ -70,11 +87,13 @@ GAF mappings can also be made from the command line:
 
 .. code:: bash
 
-   python3 -m gocats categorize_dataset YOUR_GAF.goa YOUR_OUTPUT_DIRECTORY/GC_id_mapping.json_pickle YOUR_OUTPUT_DIRECTORY MAPPED_GAF_NAME.goa
+   python3 -m gocats categorize_dataset YOUR_GAF.goa YOUR_OUTPUT_DIRECTORY/GC_id_mapping.json_pickle YOUR_OUTPUT_DIRECTORY MAPPED_DATASET_NAME.goa
 
 
 License
 ~~~~~~~
+
+Made available under the terms of The Clear BSD License. See full license in LICENSE.
 
 The Clear BSD License
 
@@ -95,9 +114,6 @@ below) provided that the following conditions are met:
 * Neither the name of the copyright holder nor the names of its contributors may be used
   to endorse or promote products derived from this software without specific
   prior written permission.
-  
-* If the source code is used in a published work, then proper citation of the source 
-  code must be included with the published work.
 
 NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS
 LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
@@ -118,6 +134,9 @@ Authors
 * **Eugene W. Hinderer III** - ehinderer_
 * **Hunter N.B. Moseley** - hunter-moseley_
 
+.. _readthedocs: http://gocats.readthedocs.io/
+.. _jsonpickle: https://github.com/jsonpickle/jsonpickle
+.. _docopt: https://github.com/docopt/docopt
 .. _git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/
 .. _ehinderer: https://github.com/ehinderer
 .. _hunter-moseley: https://github.com/hunter-moseley
