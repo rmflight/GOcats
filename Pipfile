@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+docopt = "==0.6.2"
+jsonpickle = "==0.9.4"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

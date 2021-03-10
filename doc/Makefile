@@ -48,6 +48,11 @@ help:
 clean:
 	rm -rf $(BUILDDIR)/*
 
+.PHONY: github
+github:
+	@make html
+	@cp -a _build/html/. ../docs
+
 .PHONY: html
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
